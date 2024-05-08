@@ -37,7 +37,7 @@ namespace P1AFm
         private void btnInicio_Click(object sender, EventArgs e)
         {
          
-        }
+        } 
 
         private void btnIngreso_Click(object sender, EventArgs e)
         {
