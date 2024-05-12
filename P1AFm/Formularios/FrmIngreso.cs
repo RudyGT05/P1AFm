@@ -21,10 +21,13 @@ namespace P1AFm.Formularios
         {
             
         }
-
+        decimal vuno, vdos, res;
         private void button1_Click(object sender, EventArgs e)
         {
-            resultado.Text = uno.Text + dos.Text;
+            vuno = decimal.Parse(uno.Text);
+            vdos = decimal.Parse(dos.Text);
+            res = vuno + vdos;
+            resultado.Text= res.ToString();
 
             comboBoxFacultades.Items.Add("Ingenieria");
             comboBoxFacultades.Items.Add("Medicina");

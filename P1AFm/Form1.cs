@@ -37,46 +37,34 @@ namespace P1AFm
         private void btnInicio_Click(object sender, EventArgs e)
         {
          
-        } 
-
+        }
+        int intentos = 0;
         private void btnIngreso_Click(object sender, EventArgs e)
         {
+
             labeltitulo.Text = "Bienvenido a mi App";
 
-            int intentos = 0;
-            if (textBoxusr.Text.Equals("admin", StringComparison.OrdinalIgnoreCase) && textBoxusr.Text.Equals("admin", StringComparison.OrdinalIgnoreCase))
+            if (textBoxusr.Text.Equals("admin", StringComparison.OrdinalIgnoreCase) && textBoxpwd.Text.Equals("admin", StringComparison.OrdinalIgnoreCase))
             {
                 FrmIngreso format = new FrmIngreso();
                 format.Show();
             }
             else
             {
-               
-                MessageBox.Show("Usuario o contraseña invalido");
+                MessageBox.Show("Usuario o contraseña inválido");
+                intentos++;
                 textBoxusr.Clear();
                 textBoxpwd.Clear();
-                intentos ++;
 
-                if (intentos  == 3)
+                if (intentos >= 3)
                 {
                     btnIngreso.Enabled = false;
                 }
-
-
+                else
+                {
+                    btnIngreso.Enabled = true;
+                }
             }
-            
-            
-
-
-
-
-
-
-
-
-
-
-
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
